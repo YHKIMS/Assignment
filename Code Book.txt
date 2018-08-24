@@ -1,0 +1,36 @@
+######################
+# Code Book
+######################
+
+1. About train data
+
+(1) train : read "x_train.txt" in R-Studio
+(2) train_subject : subject of train(1 to 30)
+(3) train_activity : activity of train(6 activities)
+(4) train_dataset: train dataset combind "x_train", "tarin_subject" and "train_activity" with cbind function
+
+2. About test data
+
+(1) test : read "x_test.txt" in R-Studio
+(2) test_subject : subject of test(1 to 30)
+(3) test_activity : activity of train(6 activities)
+(4) test_dataset: train dataset combind "x_test", "test_subject" and "test_activity" with cbind function
+
+3. About full dataset( merge train and test data)
+
+(1) features: read "features.txt" in R-Studio and convert it as character variable (there are 561 features)
+(2) full_dataset: literally, full dataset which has both train_dataset and test_dataset
+
+4. About extracted dataset(extracts only the measurements on the mean and standard deviation for each measurements)
+
+(1) full_dataset_sub : subsetting full_dataset with the measurements on the mean and standard deviation for each measurements
+
+5. About descriptive activity names
+(1) activity_name: read "activity_labels.txt" in R-Studio as a character value
+(2) full_dataset_sub$activities : replace "activities" column in full_dataset_sub with activity_name using revalue function in plyr package
+
+6. About second tidy-dataset 
+
+(1) full_dataset_sub_second : final output of this project, tidy-datasets with the average of each variable for each activity and  each subject
+
+
